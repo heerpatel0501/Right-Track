@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Your Birthdate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Your Birth Date</h2>
+        <form method="POST">
+            <input type="date" name="birthdate" required>
+            <br><br>
+            <button type="submit">Continue</button>
+        </form>
+    </div>
+</body>
+</html>

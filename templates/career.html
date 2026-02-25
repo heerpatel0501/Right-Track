@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Guidance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Career Guidance 🚀</h1>
+
+        <p>Choose your age group:</p>
+
+        <form method="POST">
+            <input type="number" name="age" placeholder="Enter your age" required>
+            <br><br>
+            <button type="submit">Get Career Advice</button>
+        </form>
+
+        {% if advice %}
+            <h2>Your Career Advice:</h2>
+            <p>{{ advice }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
