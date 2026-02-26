@@ -1,0 +1,23 @@
+.career-box {
+    background-color: #e0f7fa; /* pastel blue */
+    padding: 30px;
+    border-radius: 20px;
+    width: 600px;
+    margin: 40px auto;
+}
+
+.career-box h2 {
+    color: #4a4e69;
+}
+
+.career-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.career-box li {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+}

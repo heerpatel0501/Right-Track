@@ -1,2 +1,35 @@
-<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RightTrack</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dob.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/career.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2 class="logo">RightTrack</h2>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/dob">Age</a>
+            <a href="/career">Career</a>
+            <a href="/dashboard">Dashboard</a>
+        </div>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+
+</body>
+</html>

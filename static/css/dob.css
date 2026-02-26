@@ -1,0 +1,20 @@
+.dob-section {
+    background-color: #ffffff;
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.dob-section h2 {
+    color: #6a4c93;
+}
+
+.dob-section input[type="date"] {
+    padding: 10px;
+    width: 80%;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}

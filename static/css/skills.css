@@ -1,0 +1,24 @@
+.skills-box {
+    background-color: #e0f7fa;   /* pastel blue */
+    padding: 30px;
+    border-radius: 20px;
+    width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.skills-box h2 {
+    color: #457b9d;
+}
+
+.skills-box li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.skills-box:hover {
+    transform: translateY(-5px);
+}

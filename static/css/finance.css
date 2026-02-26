@@ -1,0 +1,29 @@
+.finance-box {
+    background-color: #fff4e6;   /* pastel peach */
+    padding: 30px;
+    border-radius: 20px;
+    width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.finance-box h2 {
+    color: #e76f51;
+}
+
+.finance-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.finance-box li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.finance-box:hover {
+    transform: translateY(-5px);
+}

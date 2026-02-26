@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .career-box,
+    .dob-section {
+        width: 90%;
+    }
+}
