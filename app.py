@@ -40,3 +40,17 @@ def career():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    @app.route("/career", methods=["GET", "POST"])
+def career():
+    advice = None
+    if request.method == "POST":
+        age = int(request.form["age"])
+
+        if age < 18:
+            advice = "Focus on learning new skills, explore hobbies, and build strong fundamentals."
+        elif 18 <= age <= 22:
+            advice = "Explore internships, build your portfolio, and improve communication skills."
+        else:
+            advice = "Focus on specialization, networking, job opportunities, and professional growth."
+
+    return render_template("career.html", advice=advice)
