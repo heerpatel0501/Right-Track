@@ -1,14 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skills</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
-{% block content %}
-
-<h2>Skills Tracker</h2>
-
-<div class="skills-section">
-    <input type="text" id="skillInput" placeholder="Enter a skill">
-    <button id="addSkillBtn">Add Skill</button>
-
-    <ul id="skillList"></ul>
+<div class="navbar">
+    <h2>Right-Track</h2>
+    <div>
+        <a href="/dashboard">Home</a>
+        <a href="/finance">Finance</a>
+        <a href="/health">Health</a>
+    </div>
 </div>
 
-{% endblock %}
+<div class="container">
+    <div class="card">
+        <h3>Skills Section</h3>
+        <p>Improve your skills daily.</p>
+    </div>
+</div>
+
+</body>
+</html>

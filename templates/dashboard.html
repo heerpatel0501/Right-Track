@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Dashboard - RightTrack</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome 🎉</h1>
-        <h2>Your Age: {{ age }}</h2>
 
-        <div class="cards">
-            <a href="/skills">Skills</a>
-            <a href="/health">Health</a>
-            <a href="/finance">Finance</a>
-            <a href="/career">Career</a>
+<div class="navbar">
+    <h2>RightTrack</h2>
+    <div>
+        <button onclick="showSection('finance')">Finance</button>
+        <button onclick="showSection('skills')">Skills</button>
+        <button onclick="showSection('health')">Health</button>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Your Progress</h3>
+        <div class="progress-bar">
+            <div class="progress" id="progressBar"></div>
         </div>
     </div>
+
+    <div class="card">
+        <h3>Task Board</h3>
+        <input type="text" id="taskInput" placeholder="Add Task">
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <div id="finance" class="section card">
+        <h3>Finance Tracker</h3>
+        <input type="number" id="income" placeholder="Add Income">
+        <input type="number" id="expense" placeholder="Add Expense">
+        <button onclick="calculateFinance()">Calculate</button>
+        <p id="financeResult"></p>
+    </div>
+
+    <div id="skills" class="section card hidden">
+        <h3>Skills Tracker</h3>
+        <p>Track daily learning progress.</p>
+    </div>
+
+    <div id="health" class="section card hidden">
+        <h3>Health Tracker</h3>
+        <p>Track workouts & habits.</p>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
-<div class="card finance-box">
-    <h3>Finance</h3>
-    <p>Money management tips</p>
-</div>
-
-<div class="card skills-box">
-    <h3>Skills</h3>
-    <p>Improve your abilities</p>
-</div>
-
-<div class="card health-box">
-    <h3>Health</h3>
-    <p>Stay fit and active</p>
-</div>

@@ -1,11 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
-{% block content %}
-
-<h2>Health Section</h2>
-
-<div class="health-box">
-    <p>Track your health goals here.</p>
+<div class="navbar">
+    <h2>Right-Track</h2>
+    <div>
+        <a href="/dashboard">Home</a>
+        <a href="/finance">Finance</a>
+        <a href="/skills">Skills</a>
+    </div>
 </div>
 
-{% endblock %}  
+<div class="container">
+    <div class="card">
+        <h3>Health Section</h3>
+        <p>Track workouts and health goals.</p>
+    </div>
+</div>
+
+</body>
+</html>

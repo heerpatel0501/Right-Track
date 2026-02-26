@@ -1,35 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Right-Track</title>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 </head>
+
 <body>
 
+<header class="navbar">
+    <div class="logo">Right‑Track</div>
+
     <nav>
-    <h2>Right-Track</h2>
-    <ul>
-        <li><a href="{{ url_for('home') }}">Home</a></li>
-        <li><a href="{{ url_for('skills') }}">Skills</a></li>
-        <li><a href="{{ url_for('finance') }}">Finance</a></li>
-        <li><a href="{{ url_for('health') }}">Health</a></li>
-    </ul>
-</nav>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('skills') }}">Skills</a></li>
+            <li><a href="{{ url_for('finance') }}">Finance</a></li>
+            <li><a href="{{ url_for('health') }}">Health</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <div class="container">
-        {% block content %}
-        {% endblock %}
-    </div>
-
-    <!-- JS -->
-    <script src="{{ url_for('static', filename='js/skills.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/language.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+<main class="main-content">
+    {% block content %}{% endblock %}
+</main>
 
 </body>
 </html>

@@ -1,27 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RightTrack</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-{% extends "base.html" %}
+<div class="navbar">
+    <h2>RightTrack</h2>
+    <button onclick="goToDashboard()">Enter</button>
+</div>
 
-{% block content %}
+<div class="hero">
+    <h1>Track Your Life. Win Your Future.</h1>
+    <p>Finance • Skills • Health — All in One Platform</p>
 
-<h1 id="welcomeText">Welcome to RightTrack</h1>
+    <div class="card login-card">
+        <h3>Create Your Account</h3>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Create Password">
+        <input type="date" id="birthdate">
 
-<button id="languageToggle">Change Language</button>
+        <p id="ageOutput"></p>
 
-<div class="cards">
-    <div class="card">
-        <h3 id="financeText">Finance</h3>
-        <a href="{{ url_for('finance') }}">Go to Finance</a>
-    </div>
-
-    <div class="card">
-        <h3 id="skillsText">Skills</h3>
-        <a href="{{ url_for('skills') }}">Go to Skills</a>
-    </div>
-
-    <div class="card">
-        <h3 id="healthText">Health</h3>
-        <a href="{{ url_for('health') }}">Go to Health</a>
+        <button onclick="goToDashboard()">Start Tracking</button>
     </div>
 </div>
 
-{% endblock %}  
+<script src="js/script.js"></script>
+</body>
+</html>

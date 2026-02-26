@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Select Your Age Group</h1>
+
+<div class="cards">
+    <div class="card">
+        <h3>10 - 18</h3>
+        <a href="{{ url_for('home') }}">Enter</a>
+    </div>
+
+    <div class="card">
+        <h3>19 - 35</h3>
+        <a href="{{ url_for('home') }}">Enter</a>
+    </div>
+
+    <div class="card">
+        <h3>36+</h3>
+        <a href="{{ url_for('home') }}">Enter</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="auth-container">
+    <h1>Create Your Right-Track Account</h1>
+
+    <form method="POST" action="/register">
+        <input type="email" name="email" placeholder="Enter Email" required>
+
+        <input type="password" name="password" placeholder="Create Password" required>
+
+        <input type="date" name="dob" required>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p>Already have account? <a href="/login">Login</a></p>
+</div>
+
+{% endblock %}

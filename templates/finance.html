@@ -1,12 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Finance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
-{% block content %}
-
-<h2>Finance Section</h2>
-
-<div class="finance-box">
-    <p>Track your savings and expenses here.</p>
-    <canvas id="financeChart"></canvas>
+<div class="navbar">
+    <h2>Right-Track</h2>
+    <div>
+        <a href="/dashboard">Home</a>
+        <a href="/skills">Skills</a>
+        <a href="/health">Health</a>
+    </div>
 </div>
 
-{% endblock %}
+<div class="container">
+    <div class="card">
+        <h3>Finance Section</h3>
+        <p>Track savings and expenses here.</p>
+    </div>
+</div>
+
+</body>
+</html>

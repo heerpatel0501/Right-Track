@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Right-Track | Secure Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+
+<div class="login-wrapper">
+
+    <div class="login-card">
+        <h1 class="logo">Right‑Track</h1>
+        <p class="subtitle">Smart Life Management System</p>
+
+        <form id="loginForm">
+
+            <!-- Email -->
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group password-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+                <span class="toggle-password" onclick="togglePassword()">👁</span>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" id="dob" required>
+                <small id="ageDisplay"></small>
+            </div>
+
+            <!-- Remember & Forgot -->
+            <div class="form-options">
+                <label>
+                    <input type="checkbox"> Remember Me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-message" id="errorMsg"></div>
+
+            <!-- Login Button -->
+            <button type="submit" class="login-btn">Login</button>
+
+        </form>
+
+        <p class="register-text">
+            Don’t have an account?
+            <a href="#">Create Account</a>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
