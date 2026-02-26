@@ -17,3 +17,28 @@
 .card:hover {
     transform: translateY(-8px);
 }
+.finance-box {
+    background-color: #fff4e6;
+}
+
+.skills-box {
+    background-color: #e0f7fa;
+}
+
+.health-box {
+    background-color: #fce4ec;
+}
+.skills-section {
+    background: #e0f7fa;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+#skillList li {
+    background: #ffffff;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}

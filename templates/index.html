@@ -1,32 +1,27 @@
-<<<<<<< HEAD
- {% extends "base.html" %}
+
+{% extends "base.html" %}
 
 {% block content %}
 
-<div class="container">
-    <h1>Welcome to TimeTrack 🚀</h1>
-    <p>Right Things at the Right Age</p>
-    <a href="/dob">
-        <button>Get Started</button>
-    </a>
+<h1 id="welcomeText">Welcome to RightTrack</h1>
+
+<button id="languageToggle">Change Language</button>
+
+<div class="cards">
+    <div class="card">
+        <h3 id="financeText">Finance</h3>
+        <a href="{{ url_for('finance') }}">Go to Finance</a>
+    </div>
+
+    <div class="card">
+        <h3 id="skillsText">Skills</h3>
+        <a href="{{ url_for('skills') }}">Go to Skills</a>
+    </div>
+
+    <div class="card">
+        <h3 id="healthText">Health</h3>
+        <a href="{{ url_for('health') }}">Go to Health</a>
+    </div>
 </div>
 
-{% endblock %}
-=======
- <!DOCTYPE html>
-<html>
-<head>
-    <title>TimeTrack</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to TimeTrack 🚀</h1>
-        <p>Right Things at the Right Age</p>
-        <a href="/dob"><button>Get Started</button></a>
-    </div>
-</body>
-</html>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
->>>>>>> 8e7d1feccf1d5072c1e1e5ab2d6c3489bbfc8453
+{% endblock %}  
