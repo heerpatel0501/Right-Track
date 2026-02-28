@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professional Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+    <div class="logo">
+    <a href="/">
+        <img src="{{ url_for('static', filename='images/logo.png.png') }}" alt="Logo">
+    </a>
+    <span class="brand-name">Right Track</span>
+    </div>
+    <div class="nav-links">
+        <a href="/signup" class="signup-btn">Sign Up</a>
+        <a href="/signin" class="signin-btn">Sign In</a>
+    </div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Our Platform</h1>
+        <p>A safe, trusted and professional platform for everyone.</p>
+        <a href="/dashboard" class="explore-btn">Explore</a>
+    </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about">
+    <h2>About Our Website</h2>
+    <p>
+        Our website is built to provide a simple and secure experience.
+        We focus on trust, clarity and smooth performance.
+    </p>
+    <p>
+        Users can create accounts, sign in securely and access
+        personalized features easily.
+    </p>
+</section>
+
+<!-- ===== DARK ADS SECTION ===== -->
+<section class="ads-section">
+    <h2>Our Partners</h2>
+    <div class="ads-container">
+        <div class="ad-box">Advertisement 1</div>
+        <div class="ad-box">Advertisement 2</div>
+        <div class="ad-box">Advertisement 3</div>
+    </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>

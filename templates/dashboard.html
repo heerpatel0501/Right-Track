@@ -1,56 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dashboard - RightTrack</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard - Right Track</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<div class="navbar">
-    <h2>RightTrack</h2>
-    <div>
-        <button onclick="showSection('finance')">Finance</button>
-        <button onclick="showSection('skills')">Skills</button>
-        <button onclick="showSection('health')">Health</button>
-    </div>
-</div>
+<nav class="dashboard-navbar">
 
-<div class="container">
+    <!-- LEFT -->
+    <div class="logo">
+        <a href="/">
+            <img src="{{ url_for('static', filename='images/logo.png.png') }}" alt="Logo">
+        </a>
+        <span class="brand-name">Right Track</span>
 
-    <div class="card">
-        <h3>Your Progress</h3>
-        <div class="progress-bar">
-            <div class="progress" id="progressBar"></div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Skills</a>
+            <a href="#">Health</a>
+            <a href="#">Finance</a>
+            <a href="#">Other</a>
         </div>
     </div>
 
-    <div class="card">
-        <h3>Task Board</h3>
-        <input type="text" id="taskInput" placeholder="Add Task">
-        <button onclick="addTask()">Add</button>
-        <ul id="taskList"></ul>
+    <!-- RIGHT -->
+    <div class="nav-actions">
+        <i class="fa-solid fa-gear"></i>
+        <i class="fa-solid fa-user"></i>
     </div>
 
-    <div id="finance" class="section card">
-        <h3>Finance Tracker</h3>
-        <input type="number" id="income" placeholder="Add Income">
-        <input type="number" id="expense" placeholder="Add Expense">
-        <button onclick="calculateFinance()">Calculate</button>
-        <p id="financeResult"></p>
-    </div>
+</nav>
 
-    <div id="skills" class="section card hidden">
-        <h3>Skills Tracker</h3>
-        <p>Track daily learning progress.</p>
-    </div>
-
-    <div id="health" class="section card hidden">
-        <h3>Health Tracker</h3>
-        <p>Track workouts & habits.</p>
-    </div>
-
-</div>
-
-<script src="js/script.js"></script>
 </body>
 </html>

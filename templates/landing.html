@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+</head>
+<body>
+
+<!-- ===== TOP NAVBAR ===== -->
+<nav class="navbar">
+    <div class="logo">YourLogo</div>
+   <div class="nav-links">
+    <a href="/signup" class="signup-btn">Sign Up</a>
+    <a href="/signin" class="signin-btn">Sign In</a>
+</div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Our Platform</h1>
+        <p>A simple, secure and trusted platform for everyone.</p>
+        <button class="explore-btn">Explore</button>
+    </div>
+</section>
+
+<!-- ===== INFO SECTION ===== -->
+<section class="info">
+    <div class="info-box">
+        <h2>Easy to Use</h2>
+        <p>Designed for all age groups with simple interface.</p>
+    </div>
+
+    <div class="info-box">
+        <h2>Secure & Trusted</h2>
+        <p>Your data remains protected and safe with us.</p>
+    </div>
+
+    <div class="info-box">
+        <h2>Fast Performance</h2>
+        <p>Quick and smooth experience without confusion.</p>
+    </div>
+</section>
+
+<!-- ===== DARK ADS SECTION ===== -->
+<section class="ads-section">
+    <h2>Our Partners</h2>
+    <div class="ads-container">
+        <div class="ad-box">Advertisement 1</div>
+        <div class="ad-box">Advertisement 2</div>
+        <div class="ad-box">Advertisement 3</div>
+    </div>
+</section>
+<section class="about">
+    <div class="about-content">
+        <h2>About Our Platform</h2>
+        <p>
+            Our website is designed to provide a safe, professional and
+            user-friendly experience for people of all age groups.
+            We focus on simplicity, trust and performance.
+        </p>
+        <p>
+            Users can securely create accounts, access personalized features,
+            and explore services tailored to their needs.
+        </p>
+    </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+</body>
+</html>

@@ -1,27 +1,22 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
-def login():
-    return render_template('login.html')
+def home():
+    return render_template('auth.html')
 
-@app.route('/dashboard', methods=['POST'])
+@app.route('/signup')
+def signup():
+    return "<h1>Sign Up Page Coming Soon</h1>"
+
+@app.route('/signin')
+def signin():
+    return "<h1>Sign In Page Coming Soon</h1>"
+
+@app.route('/dashboard')
 def dashboard():
-    email = request.form['email']
-    return render_template('dashboard.html', email=email)
-
-@app.route('/finance')
-def finance():
-    return render_template('finance.html')
-
-@app.route('/skills')
-def skills():
-    return render_template('skills.html')
-
-@app.route('/health')
-def health():
-    return render_template('health.html')
+    return render_template('dashboard.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

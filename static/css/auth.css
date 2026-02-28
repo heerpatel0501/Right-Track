@@ -2,42 +2,90 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #f4f7fb; /* Soft professional background */
+    background-color: #f4f7fb;
     color: #2c3e50;
 }
 
 /* ===== NAVBAR ===== */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    height: 70px;              /* Fixed height */
+    padding: 0 40px;
     background-color: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
+/* Logo container */
 .logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.login-btn {
+/* Logo image */
+.logo img {
+    height: 50px;              /* Controlled size */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Brand text */
+.brand-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+
+    /* Gradient text */
+    background: linear-gradient(120deg, #4a90e2, #6a8dff, #7b5cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: transform 0.3s ease;
+}
+
+/* Hover smooth zoom */
+.logo:hover img,
+.logo:hover .brand-name {
+    transform: scale(1.06);
+}
+
+.nav-links a {
     padding: 8px 18px;
-    background-color: #2c3e50;
-    color: white;
+    margin-left: 10px;
     text-decoration: none;
     border-radius: 6px;
+    font-weight: 500;
     transition: 0.3s;
 }
 
-.login-btn:hover {
-    background-color: #1a252f;
+/* Sign Up Button */
+.signup-btn {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: #357abd;
+}
+
+/* Sign In Button */
+.signin-btn {
+    border: 1px solid #4a90e2;
+    color: #4a90e2;
+}
+
+.signin-btn:hover {
+    background-color: #4a90e2;
+    color: white;
 }
 
 /* ===== HERO SECTION ===== */
 .hero {
-    height: 85vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +95,7 @@ body {
     overflow: hidden;
 }
 
-/* Hover animated background effect */
+/* Moving soft background effect */
 .hero::before {
     content: "";
     position: absolute;
@@ -69,13 +117,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 40px;
 }
 
 .explore-btn {
@@ -85,35 +127,35 @@ body {
     color: white;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
+    margin-top: 15px;
 }
 
 .explore-btn:hover {
     background-color: #1a252f;
 }
 
-/* ===== INFO SECTION ===== */
-.info {
-    display: flex;
-    justify-content: space-around;
-    padding: 60px 50px;
+/* ===== ABOUT SECTION ===== */
+.about {
+    padding: 60px 80px;
+    text-align: center;
     background-color: white;
 }
 
-.info-box {
-    width: 30%;
-    text-align: center;
+.about h2 {
+    margin-bottom: 15px;
 }
 
-.info-box h2 {
-    margin-bottom: 10px;
+.about p {
+    max-width: 700px;
+    margin: 10px auto;
+    color: #555;
 }
 
 /* ===== DARK ADS SECTION ===== */
 .ads-section {
-    background-color: #0f172a; /* Dark professional */
+    background-color: #0f172a;
     color: white;
-    padding: 50px;
+    padding: 60px;
     text-align: center;
 }
 
@@ -137,49 +179,12 @@ body {
     background-color: #334155;
 }
 
-.nav-links a {
-    padding: 8px 18px;
-    margin-left: 10px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: 0.3s;
+.logo img,
+.brand-name {
+    transition: transform 0.3s ease;
 }
 
-/* Sign Up button (highlighted) */
-.signup-btn {
-    background-color: #4a90e2;
-    color: white;
-}
-
-.signup-btn:hover {
-    background-color: #357abd;
-}
-
-/* Sign In button (outline style) */
-.signin-btn {
-    border: 1px solid #4a90e2;
-    color: #4a90e2;
-}
-
-.signin-btn:hover {
-    background-color: #4a90e2;
-    color: white;
-}
-
-.about {
-    padding: 60px 80px;
-    text-align: center;
-    background-color: #ffffff;
-}
-
-.about h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-}
-
-.about p {
-    max-width: 700px;
-    margin: 10px auto;
-    color: #555;
+.logo:hover img,
+.logo:hover .brand-name {
+    transform: scale(1.08);
 }
