@@ -257,3 +257,70 @@ label {
     50% { transform: translateY(-15px); }
     100% { transform: translateY(0px); }
 }
+/* DASHBOARD CENTER DESIGN */
+
+.dashboard-container {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-card {
+    background: white;
+    padding: 40px 60px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 400px;
+}
+
+.welcome-card h2 {
+    margin-bottom: 30px;
+    color: #444;
+}
+
+/* CIRCLE GRAPH */
+.progress-circle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.circle {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #6c63ff 0% 78%,
+        #e6e6e6 78% 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.circle span {
+    position: absolute;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Inner white circle */
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Stats */
+.stats p {
+    margin: 5px 0;
+    font-weight: 500;
+    color: #555;
+}

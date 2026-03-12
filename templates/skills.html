@@ -1,25 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Skills</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Skills - Right Track</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skills.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="navbar">
-    <h2>Right-Track</h2>
-    <div>
-        <a href="/dashboard">Home</a>
-        <a href="/finance">Finance</a>
-        <a href="/health">Health</a>
+<nav class="top-nav">
+    <div class="logo-section">
+        <a href="/dashboard">
+            <img src="{{ url_for('static', filename='images/logo.png.png') }}" class="logo">
+        </a>
+        <span class="brand-name">Right Track</span>
     </div>
-</div>
+
+    <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/skills" class="active">Skills</a>
+    </div>
+</nav>
 
 <div class="container">
-    <div class="card">
-        <h3>Skills Section</h3>
-        <p>Improve your skills daily.</p>
-    </div>
+
+    <h2>Your Skills</h2>
+
+    {% if user_interests|length == 0 %}
+
+        <div class="interest-selection">
+            <h3>Select Your Interests</h3>
+            <div class="checkbox-grid">
+                {% for interest in available_interests %}
+                    <label>
+                        <input type="checkbox">
+                        {{ interest }}
+                    </label>
+                {% endfor %}
+            </div>
+            <button class="save-btn">Save Interests</button>
+        </div>
+
+    {% else %}
+
+        <div class="skill-cards">
+
+            {% for interest in user_interests %}
+            <div class="skill-card">
+
+                <h3>{{ interest.name }}</h3>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: {{ interest.progress }}%;"></div>
+                </div>
+
+                <p>Progress: {{ interest.progress }}%</p>
+                <p>XP: {{ interest.xp }}</p>
+                <p>Level: {{ interest.level }}</p>
+
+            </div>
+            {% endfor %}
+
+        </div>
+
+    {% endif %}
+
 </div>
 
 </body>

@@ -1,24 +1,94 @@
-.skills-box {
-    background-color: #e0f7fa;   /* pastel blue */
-    padding: 30px;
-    border-radius: 20px;
-    width: 600px;
-    margin: 40px auto;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
+body {
+    background-color: #0f172a;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
-.skills-box h2 {
-    color: #457b9d;
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #1e293b;
 }
 
-.skills-box li {
-    background: #ffffff;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 10px;
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.skills-box:hover {
-    transform: translateY(-5px);
+.brand-name {
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav-links .active {
+    color: #fff;
+    border-bottom: 2px solid #38bdf8;
+}
+
+.container {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Checkbox Grid */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+label {
+    background: #334155;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+}
+
+.save-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Skill Cards */
+.skill-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #334155;
+    border-radius: 5px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
 }

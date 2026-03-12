@@ -2,37 +2,133 @@
 <html>
 <head>
     <title>Dashboard - Right Track</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-<nav class="dashboard-navbar">
+<!-- ================= NAVBAR ================= -->
 
-    <!-- LEFT -->
-    <div class="logo">
-        <a href="/">
-            <img src="{{ url_for('static', filename='images/logo.png.png') }}" alt="Logo">
-        </a>
+<nav class="navbar">
+
+    <div class="left-section">
+        <img src="{{ url_for('static', filename='images/logo.png.png') }}" class="logo">
         <span class="brand-name">Right Track</span>
 
         <div class="nav-links">
             <a href="#">Home</a>
-            <a href="#">Skills</a>
+            <a href="/skills">Skills</a>
+
             <a href="#">Health</a>
             <a href="#">Finance</a>
             <a href="#">Other</a>
         </div>
     </div>
 
-    <!-- RIGHT -->
-    <div class="nav-actions">
+    <div class="right-section">
         <i class="fa-solid fa-gear"></i>
         <i class="fa-solid fa-user"></i>
     </div>
 
 </nav>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<!-- ================= DASHBOARD ================= -->
+
+<div class="dashboard">
+
+    <h2 class="welcome">
+        Welcome Back, {{ username }} 👋
+    </h2>
+
+    <div class="progress-layout">
+
+        <!-- LEFT SIDE - BIG CIRCLE -->
+        <div class="circle-box">
+
+            <div class="circle"
+                 style="background: conic-gradient(#6c63ff 0% {{ overall }}%, #e6e6e6 {{ overall }}% 100%);">
+
+                <div class="inner-circle">
+                    <h3>{{ overall }}%</h3>
+                    <p>Overall Progress</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE - CATEGORY PROGRESS -->
+        <div class="details-box">
+
+            <div class="progress-item">
+                <span>Skills</span>
+                <span>{{ skills }}%</span>
+            </div>
+
+            <div class="progress-item">
+                <span>Health</span>
+                <span>{{ health }}%</span>
+            </div>
+
+            <div class="progress-item">
+                <span>Finance</span>
+                <span>{{ finance }}%</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= TODAY'S FOCUS ================= -->
+
+<div class="focus-section">
+    <h3>Today's Focus</h3>
+
+    <ul>
+        <li>📘 Complete 1 Skill Quiz</li>
+        <li>💧 20 Min Workout</li>
+        <li>💰 Track Today Expense</li>
+    </ul>
+</div>
+
+<!-- ================= WEEKLY ACTIVITY ================= -->
+
+<div class="weekly-section">
+    <h3>Weekly Activity</h3>
+
+    <div class="bars">
+        {% for day in weekly_data %}
+        <div class="bar">
+            <div class="fill" style="height: {{ day.value }}%;"></div>
+            <span>{{ day.label }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- ================= AI SUGGESTIONS ================= -->
+
+<div class="ai-section">
+    <h3>Recommended For You</h3>
+
+    <div class="ai-card">
+        <h4>🔥 Top News</h4>
+        <p>{{ ai_news }}</p>
+    </div>
+
+    <div class="ai-card">
+        <h4>📺 Recommended YouTube Video</h4>
+        <p>{{ ai_video }}</p>
+    </div>
+</div>
 
 </body>
 </html>
