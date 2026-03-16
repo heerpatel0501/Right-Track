@@ -1,180 +1,134 @@
-/* ===== DASHBOARD CSS ===== */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #0f172a; /* Dark background */
-    font-family: 'Poppins', sans-serif;
-    color: #ffffff;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: #1e293b;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+body{
+background:#f3f4f6;
 }
 
-.left-section {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-.logo {
-    height: 40px;
+.nav-left{
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-.brand-name {
-    font-weight: 700;
-    font-size: 20px;
-    color: #38bdf8;
+.logo{
+width:40px;
 }
 
-.nav-links a {
-    color: #94a3b8;
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 14px;
-    transition: color 0.3s;
+.brand{
+font-size:20px;
+font-weight:600;
+background:linear-gradient(90deg,#4f8df5,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.nav-links a:hover {
-    color: #fff;
+/* DASHBOARD */
+
+.dashboard{
+padding:40px;
 }
 
-.right-section i {
-    margin-left: 20px;
-    font-size: 18px;
-    color: #cbd5e1;
-    cursor: pointer;
+.progress-layout{
+display:flex;
+gap:40px;
+margin-top:30px;
 }
 
-/* Dashboard Layout */
-.dashboard {
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+.circle{
+width:160px;
+height:160px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
-.welcome {
-    margin-bottom: 40px;
+.inner-circle{
+width:120px;
+height:120px;
+background:white;
+border-radius:50%;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 }
 
-.progress-layout {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 20px;
+.details-box{
+display:flex;
+flex-direction:column;
+gap:15px;
 }
 
-/* Circle Chart */
-.circle-box {
-    position: relative;
+.progress-item{
+background:white;
+padding:12px 18px;
+border-radius:8px;
+display:flex;
+justify-content:space-between;
+width:200px;
 }
 
-.circle {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+/* WEEKLY */
+
+.weekly-section{
+padding:40px;
 }
 
-.inner-circle {
-    width: 140px;
-    height: 140px;
-    background: #1e293b;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.bars{
+display:flex;
+gap:15px;
+margin-top:20px;
 }
 
-/* Details */
-.details-box {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.bar{
+width:40px;
+height:150px;
+background:#ddd;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+align-items:center;
+border-radius:4px;
 }
 
-.progress-item {
-    display: flex;
-    justify-content: space-between;
-    background: #334155;
-    padding: 15px;
-    border-radius: 10px;
-    font-weight: 600;
+.fill{
+width:100%;
+background:#6c63ff;
+border-radius:4px 4px 0 0;
 }
 
-/* Sections */
-.focus-section, .weekly-section, .ai-section {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 30px;
-    background: #1e293b;
-    border-radius: 20px;
+.bar span{
+margin-top:5px;
+font-size:12px;
 }
 
-.focus-section ul {
-    list-style: none;
-    padding: 0;
+/* AI SECTION */
+
+.ai-section{
+padding:40px;
 }
 
-.focus-section li {
-    margin: 10px 0;
-    padding: 10px;
-    background: #334155;
-    border-radius: 8px;
-}
-
-/* Weekly Bars */
-.bars {
-    display: flex;
-    gap: 10px;
-    height: 150px;
-    align-items: flex-end;
-    margin-top: 20px;
-}
-
-.bar {
-    flex: 1;
-    background: #334155;
-    border-radius: 8px;
-    position: relative;
-    text-align: center;
-}
-
-.fill {
-    background: #38bdf8;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    border-radius: 8px;
-    opacity: 0.8;
-}
-
-.bar span {
-    position: absolute;
-    bottom: -25px;
-    width: 100%;
-    font-size: 12px;
-    color: #94a3b8;
-}
-
-/* AI Cards */
-.ai-card {
-    background: #334155;
-    padding: 20px;
-    margin-top: 15px;
-    border-radius: 12px;
+.ai-card{
+background:white;
+padding:20px;
+margin-top:15px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }

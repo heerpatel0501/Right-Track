@@ -1,72 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Your Website</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+
+<title>Right Track</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<!-- ===== TOP NAVBAR ===== -->
+<!-- NAVBAR -->
+
 <nav class="navbar">
-    <div class="logo">YourLogo</div>
-   <div class="nav-links">
-    <a href="/signup" class="signup-btn">Sign Up</a>
-    <a href="/signin" class="signin-btn">Sign In</a>
+
+<div class="nav-left">
+
+<img src="{{ url_for('static', filename='images/logo.png.png') }}" class="logo">
+
+<span class="brand">Right Track</span>
+
 </div>
+
+<div class="nav-right">
+
+<a href="/signup" class="signup">Sign Up</a>
+
+<a href="/signin" class="signin">Sign In</a>
+
+</div>
+
 </nav>
 
-<!-- ===== HERO SECTION ===== -->
+
+<!-- HERO -->
+
 <section class="hero">
-    <div class="hero-content">
-        <h1>Welcome to Our Platform</h1>
-        <p>A simple, secure and trusted platform for everyone.</p>
-        <button class="explore-btn">Explore</button>
-    </div>
+
+<h1>Welcome to Our Platform</h1>
+
+<p>A safe, trusted and professional platform for everyone.</p>
+
+<button class="explore">Explore</button>
+
 </section>
 
-<!-- ===== INFO SECTION ===== -->
-<section class="info">
-    <div class="info-box">
-        <h2>Easy to Use</h2>
-        <p>Designed for all age groups with simple interface.</p>
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>
+                Right Track is a platform designed to help users improve skills,
+                manage health, and track finances in a simple and secure way.
+            </p>
+        </div>
+
+        <div class="footer-help">
+            <h3>Help</h3>
+            <ul>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#" id="termsLink">Terms</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-languages">
+            <h3>Languages</h3>
+            <ul>
+                <li>English</li>
+                <li>Hindi</li>
+                <li>Gujarati</li>
+            </ul>
+        </div>
+
     </div>
 
-    <div class="info-box">
-        <h2>Secure & Trusted</h2>
-        <p>Your data remains protected and safe with us.</p>
+    <hr>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+
+        <div class="footer-brand">
+            <img src="/static/images/logo.png" alt="logo">
+            <span>Right Track</span>
+        </div>
+
+        <p>© 2026 Right Track | All Rights Reserved</p>
+
     </div>
 
-    <div class="info-box">
-        <h2>Fast Performance</h2>
-        <p>Quick and smooth experience without confusion.</p>
-    </div>
-</section>
-
-<!-- ===== DARK ADS SECTION ===== -->
-<section class="ads-section">
-    <h2>Our Partners</h2>
-    <div class="ads-container">
-        <div class="ad-box">Advertisement 1</div>
-        <div class="ad-box">Advertisement 2</div>
-        <div class="ad-box">Advertisement 3</div>
-    </div>
-</section>
-<section class="about">
-    <div class="about-content">
-        <h2>About Our Platform</h2>
-        <p>
-            Our website is designed to provide a safe, professional and
-            user-friendly experience for people of all age groups.
-            We focus on simplicity, trust and performance.
-        </p>
-        <p>
-            Users can securely create accounts, access personalized features,
-            and explore services tailored to their needs.
-        </p>
-    </div>
-</section>
-
-<script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+</footer>
 </body>
 </html>

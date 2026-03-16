@@ -1,80 +1,210 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0f172a;
-    color: #fff;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-.navbar {
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body{
+background:white;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #38bdf8;
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:white;
+border-bottom:1px solid #e5e7eb;
 }
 
-.signup-btn, .signin-btn {
-    text-decoration: none;
-    color: #fff;
-    padding: 8px 16px;
-    margin-left: 10px;
-    border-radius: 5px;
+.nav-left{
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-.signup-btn {
-    background: #38bdf8;
+.logo{
+width:45px;
 }
 
-.signin-btn {
-    border: 1px solid #fff;
+.brand{
+font-size:22px;
+font-weight:700;
+background:linear-gradient(90deg,#4f8df5,#8b5cf6);
+-webkit-background-clip: text;
+-webkit-text-fill-color:transparent;
 }
 
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+/* NAV BUTTONS */
+
+.nav-right a{
+text-decoration:none;
+margin-left:15px;
+font-weight:500;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+.signup{
+background:#4f8df5;
+color:white;
+padding:10px 18px;
+border-radius:8px;
 }
 
-.explore-btn {
-    padding: 15px 40px;
-    font-size: 18px;
-    background: linear-gradient(90deg, #38bdf8, #818cf8);
-    border: none;
-    border-radius: 30px;
-    color: #fff;
-    cursor: pointer;
-    margin-top: 20px;
+.signin{
+border:2px solid #4f8df5;
+padding:8px 16px;
+border-radius:8px;
+color:#4f8df5;
 }
 
-/* Info Section */
-.info {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px 20px;
+/* HERO SECTION */
+
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+background:linear-gradient(to right,#cbd5e1,#94a3b8);
 }
 
-.info-box {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
+.hero h1{
+font-size:48px;
+color:#334155;
+margin-bottom:20px;
 }
 
-.about {
-    text-align: center;
-    padding: 50px;
-    background: #1e293b;
+.hero p{
+font-size:18px;
+color:#475569;
+margin-bottom:25px;
+}
+
+.explore{
+background:#334155;
+color:white;
+padding:12px 28px;
+border-radius:8px;
+border:none;
+font-size:16px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#0f172a;
+color:white;
+padding:50px 80px 20px;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.footer-section{
+max-width:300px;
+}
+
+.footer-section h3{
+margin-bottom:15px;
+font-size:18px;
+}
+
+.footer-section p{
+font-size:14px;
+color:#cbd5e1;
+line-height:1.6;
+}
+
+.footer-section ul{
+list-style:none;
+padding:0;
+}
+
+.footer-section ul li{
+margin-bottom:8px;
+}
+
+.footer-section ul li a{
+text-decoration:none;
+color:#cbd5e1;
+font-size:14px;
+transition:0.3s;
+}
+
+.footer-section ul li a:hover{
+color:#60a5fa;
+}
+
+/* bottom line */
+
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+padding-top:15px;
+border-top:1px solid #334155;
+font-size:13px;
+color:#94a3b8;
+}
+
+/* TERMS DROPDOWN */
+
+.terms-box{
+position:relative;
+cursor:pointer;
+}
+
+.terms-title{
+color:#cbd5e1;
+font-size:14px;
+}
+
+.terms-content{
+display:none;
+position:absolute;
+bottom:30px;
+left:0;
+background:#1e293b;
+padding:12px;
+border-radius:6px;
+width:220px;
+font-size:12px;
+color:#e2e8f0;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* SHOW ON HOVER */
+
+.terms-box:hover .terms-content{
+display:block;
+}
+
+/* FOOTER BRAND */
+
+.footer-brand{
+display:flex;
+align-items:center;
+margin-top:18px;
+gap:10px;
+}
+
+.footer-logo{
+width:32px;
+height:auto;
+}
+
+.footer-name{
+font-size:18px;
+font-weight:600;
+background:linear-gradient(90deg,#4f8df5,#8b5cf6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
