@@ -1,129 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Skills Dashboard</title>
 
-<title>Dashboard</title>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<!-- 🔹 NAVBAR -->
 <nav class="navbar">
-
-<div class="nav-left">
-
-<img src="{{ url_for('static', filename='images/logo.png') }}" class="logo">
-
-<span class="brand">Right Track</span>
-
-</div>
-
-<div class="nav-right">
-
-<a href="/">Home</a>
-
-</div>
-
+    <h2>Right Track</h2>
 </nav>
 
+<!-- 🔹 DASHBOARD -->
+<div class="container">
 
-<div class="dashboard">
+    <h1>Select Your Skills</h1>
 
-<h2>Welcome Back, {{ username }} 👋</h2>
+    <div class="skills-grid">
 
-<div class="progress-layout">
+        <div class="card" onclick="selectSkill(this)">
+            <img src="{{ url_for('static', filename='images/coding.jpeg') }}">
+            <p>Coding</p>
+        </div>
 
-<div class="circle-box">
+        <div class="card" onclick="selectSkill(this)">
+            <img src="{{ url_for('static', filename='images/communication.jpeg') }}">
+            <p>Communication</p>
+        </div>
 
-<div class="circle"
-style="background: conic-gradient(#6c63ff 0%, #6c63ff {{ overall }}%, #e6e6e6 {{ overall }}%, #e6e6e6 100%);">
+        <div class="card" onclick="selectSkill(this)">
+            <img src="{{ url_for('static', filename='images/fittness.jpeg') }}">
+            <p>Fitness</p>
+        </div>
 
-<div class="inner-circle">
+        <div class="card" onclick="selectSkill(this)">
+            <img src="{{ url_for('static', filename='images/music.jpeg') }}">
+            <p>Music</p>
+        </div>
 
-<h3>{{ overall }}%</h3>
+        <div class="card" onclick="selectSkill(this)">
+            <img src="{{ url_for('static', filename='images/reading.jpeg') }}">
+            <p>Reading</p>
+        </div>
 
-<p>Overall</p>
+        <div class="card" onclick="selectSkill(this)">
+            <img src="{{ url_for('static', filename='images/photography.png') }}">
+            <p>Photography</p>
+        </div>
 
-</div>
-
-</div>
-
-</div>
-
-
-<div class="details-box">
-
-<div class="progress-item">
-<span>Skills</span>
-<span>{{ skills }}%</span>
-</div>
-
-<div class="progress-item">
-<span>Health</span>
-<span>{{ health }}%</span>
-</div>
-
-<div class="progress-item">
-<span>Finance</span>
-<span>{{ finance }}%</span>
-</div>
+    </div>
 
 </div>
 
-</div>
-
-</div>
-
-
-<div class="weekly-section">
-
-<h3>Weekly Activity</h3>
-
-<div class="bars">
-
-{% for day in weekly_data %}
-
-<div class="bar">
-
-<div class="fill" style="height: {{ day.value }}%;"></div>
-
-<span>{{ day.label }}</span>
-
-</div>
-
-{% endfor %}
-
-</div>
-
-</div>
-
-
-<div class="ai-section">
-
-<h3>Recommended For You</h3>
-
-<div class="ai-card">
-
-<h4>Top News</h4>
-
-<p>{{ ai_news }}</p>
-
-</div>
-
-<div class="ai-card">
-
-<h4>Recommended Video</h4>
-
-<p>{{ ai_video }}</p>
-
-</div>
-
-</div>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
 
 </body>
-
 </html>
