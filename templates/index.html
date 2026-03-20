@@ -1,32 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>RightTrack</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Right Track</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="navbar">
-    <h2>RightTrack</h2>
-    <button onclick="goToDashboard()">Enter</button>
-</div>
+<!-- 🔹 NAVBAR -->
+<nav class="navbar">
 
-<div class="hero">
-    <h1>Track Your Life. Win Your Future.</h1>
-    <p>Finance • Skills • Health — All in One Platform</p>
-
-    <div class="card login-card">
-        <h3>Create Your Account</h3>
-        <input type="email" id="email" placeholder="Email">
-        <input type="password" id="password" placeholder="Create Password">
-        <input type="date" id="birthdate">
-
-        <p id="ageOutput"></p>
-
-        <button onclick="goToDashboard()">Start Tracking</button>
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo">
+        <span class="brand-name">Right Track</span>
     </div>
-</div>
 
-<script src="js/script.js"></script>
+    <div class="nav-buttons">
+        <a href="/signin" class="signin">Sign In</a>
+    </div>
+
+</nav>
+
+<!-- 🔹 HERO SECTION -->
+<section class="hero">
+
+    <h1>Welcome to Our Platform</h1>
+    <p>A safe, trusted and professional platform for everyone.</p>
+
+    
+   <a href="{{ url_for('dashboard') }}" class="explore-btn">Explore</a>
+
+
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- LEFT: ABOUT -->
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>
+                Right Track is a platform designed to help users <br>
+                improve skills,manage health, and <br> 
+                track finances in a simple and secure way.
+            </p>
+        </div>
+
+        <!-- CENTER: HELP -->
+        <div class="footer-section">
+            <h3>Help</h3>
+            <ul>
+                <li>Support</li>
+                <li>FAQs</li>
+                <li>Contact Us</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+
+        <!-- RIGHT: LANGUAGES -->
+        <div class="footer-section">
+            <h3>Languages</h3>
+            <ul>
+                <li>English</li>
+                <li>Hindi</li>
+                <li>Gujarati</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="footer-bottom">
+        © 2026 Right Track | All Rights Reserved
+    </p>
+
+</footer>
 </body>
 </html>
