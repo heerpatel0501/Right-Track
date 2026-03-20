@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Account - Right Track</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <div class="box">
+
+        <!-- LEFT SIDE -->
+        <div class="left">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo">
+
+            <h2>Create your Right Track Account</h2>
+            <p>Start your journey with skills based on your age 🚀</p>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right">
+
+            <input type="text" placeholder="First name" class="input-box">
+            <input type="text" placeholder="Last name (optional)" class="input-box">
+
+            <a href="/basic">
+                <button class="next-btn">Next</button>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f4f4f7, #c5e2ff);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+     width: 680px;
+    height: 250px;
+    margin: 80px auto;
+    background: rgb(252, 252, 255);
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* LEFT */
+.left {
+    width: 45%;
+}
+
+.logo {
+    width: 40px;
+    margin-bottom: 20px;
+}
+
+/* RIGHT */
+.right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 55px;
+}
+
+/* DOB row */
+.dob-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.dob-row input,
+.dob-row select {
+    padding: 10px;
+    width: 100%;
+}
+
+/* gender */
+.gender {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* link */
+.info-link {
+    color: #2563eb;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* button */
+.next-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 40%;
+    align-self: flex-end; 
+}
+
+.next-btn:hover {
+    background: #1e40af;
+
+}

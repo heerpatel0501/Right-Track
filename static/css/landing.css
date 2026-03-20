@@ -51,16 +51,19 @@ font-size:14px;
 cursor:pointer;
 }
 
-.signup{
-background:#5a8dee;
-color:white;
-border:none;
-}
-
 .signin{
-background:transparent;
-border:2px solid #5a8dee;
-margin-left:10px;
+    margin-left:10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    align-self: flex-end;
+    cursor: pointer;
+    width: 30%;
+    margin-top: 15px;
+    text-decoration: none;
+
 }
 
 /* 🔹 HERO */

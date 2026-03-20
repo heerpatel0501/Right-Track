@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sign In - Right Track</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f4f4f7, #c5e2ff);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-box {
+    width: 680px;
+    height: 250px;
+    margin: 80px auto;
+    background: rgb(252, 252, 255);
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.left {
+    width: 45%;
+}
+
+.left img {
+    width: 46px;
+}
+
+.left h2 {
+    margin: 15px 0 10px;
+}
+
+.left p {
+    color: #555;
+    font-size: 14px;
+}
+
+.right {
+    width: 45%;
+}
+
+.input-box {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.link {
+    color: #1a73e8;
+    font-size: 13px;
+    margin-top: 8px;
+    display: block;
+    text-decoration: none;
+}
+
+.bottom-text {
+    font-size: 13px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.bottom-text a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.next-btn {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.next-btn:hover {
+    background: #1558b0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main-box">
+
+<!-- LEFT -->
+<div class="left">
+    <img src="{{ url_for('static', filename='images/logo.png') }}">
+    <h2>Sign in</h2>
+
+    <p>
+        Get personalized skill guidance based on your age and interests with Right Track.
+    </p>
+</div>
+
+<!-- RIGHT -->
+<div class="right">
+
+    <!-- EMAIL INPUT -->
+    <input type="text" class="input-box" placeholder="Email or username">
+
+    <p class="bottom-text">
+        Not your computer? Use guest mode to explore privately.
+        <br>
+        <a href="#">Learn more about Right Track</a>
+    </p>
+
+    <div class="actions">
+        <a href="/signup" class="create"><b>Create account</b></a>
+
+        <!-- NEXT BUTTON -->
+        <a href="/password">
+            <button class="next-btn">Next</button>
+        </a>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

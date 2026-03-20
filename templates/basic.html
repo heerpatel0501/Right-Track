@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Info - Right Track</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/basic.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo">
+        <h1>Basic information</h1>
+        <p>Enter your date of birth and gender</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+        <div class="dob-row">
+            <input type="text" placeholder="Day">
+            
+            <select>
+                <option>Month</option>
+                <option>Jan</option>
+                <option>Feb</option>
+                <option>Mar</option>
+            </select>
+
+            <input type="text" placeholder="Year">
+        </div>
+        
+        <select class="gender">
+            <option>Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+        
+
+        <button class="next-btn">Next</button>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -13,13 +13,12 @@
 <nav class="navbar">
 
     <div class="logo-container">
-        <img src="{{ url_for('static', filename='images/logo.png.png') }}" class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo">
         <span class="brand-name">Right Track</span>
     </div>
 
     <div class="nav-buttons">
-        <button class="signup">Sign Up</button>
-        <button class="signin">Sign In</button>
+        <a href="/signin" class="signin">Sign In</a>
     </div>
 
 </nav>
@@ -31,7 +30,7 @@
     <p>A safe, trusted and professional platform for everyone.</p>
 
     
-   <a href="/dashboard">Explore</a>
+   <a href="{{ url_for('dashboard') }}" class="explore-btn">Explore</a>
 
 
 </section>
@@ -44,8 +43,8 @@
             <h3>About Us</h3>
             <p>
                 Right Track is a platform designed to help users <br>
-                improve skills,
-                manage health, and <br> track finances in a simple and secure way.
+                improve skills,manage health, and <br> 
+                track finances in a simple and secure way.
             </p>
         </div>
 

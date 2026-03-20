@@ -23,45 +23,55 @@ margin-bottom:30px;
 }
 
 /* GRID */
-.skills-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-padding:20px;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-/* CARD */
-.card{
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-cursor:pointer;
-transition:0.3s;
+.card {
+    position: relative;
+    height: 180px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-/* IMAGE */
-.card img{
-width:80px;
-height:80px;
-margin-bottom:10px;
+/* FULL IMAGE */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
 }
 
-/* TEXT */
-.card p{
-font-weight:600;
-color:#34495e;
+/* DARK OVERLAY (for text visibility) */
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
 }
 
-/* 🔥 HOVER EFFECT */
-.card:hover{
-transform:translateY(-10px) scale(1.05);
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-background:#f0f6ff;
+/* TEXT ON IMAGE */
+.card-text {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 2;
 }
 
-/* SELECTED */
-.card.active{
-border:2px solid #4a90e2;
-background:#e8f1ff;
+/* HOVER EFFECT */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card:hover::after {
+    background: rgba(0, 0, 0, 0.6);
 }
