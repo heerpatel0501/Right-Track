@@ -18,8 +18,35 @@
 <div class="container">
 
     <h1>Select Your Skills</h1>
+    <div class="recommend-box">
+    <h3>Recommended For You</h3>
+    <p>Based on your age, focus on:</p>
+    <ul>
+        <li>💻 Coding Basics</li>
+        <li>🗣 Communication Skills</li>
+        <li>🏃 Fitness</li>
+    </ul>
+</div>
+<div class="daily-box">
+    <h3>Today's Suggestion</h3>
+    <p>💡 Practice coding for 30 minutes</p>
+    <p>📖 Read 10 pages of a book</p>
+</div>
+<div class="progress-box">
+    <h3>Your Progress</h3>
+
+    <p>Coding</p>
+    <div class="bar"><div class="fill" style="width: 40%;"></div></div>
+
+    <p>Fitness</p>
+    <div class="bar"><div class="fill" style="width: 60%;"></div></div>
+
+    <p>Reading</p>
+    <div class="bar"><div class="fill" style="width: 30%;"></div></div>
+</div>
 
     <div class="skills-grid">
+        <p style="color:gray;">Choose a skill to get personalized guidance</p>
 
        <div class="card" onclick="selectSkill(this)">
     <img src="{{ url_for('static', filename='images/coding.jpeg') }}">

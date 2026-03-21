@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 # 🔹 Landing Page
 @app.route("/")
-def landing():
-    return render_template("landing.html")
+def index():
+    return render_template("index.html")
 
 # 🔹 Signin Page
 @app.route("/signin")
