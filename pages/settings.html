@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Settings - Right Track</title>
+<link rel="stylesheet" href="../css/settings.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <h2>Right Track</h2>
+</nav>
+
+<div class="container">
+
+    <h1>⚙️ Settings</h1>
+
+    <!-- PROFILE -->
+    <div class="box">
+        <h3>👤 Profile</h3>
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Upload Profile Photo</label>
+        <input type="file">
+    </div>
+
+    <!-- CHANGE PASSWORD -->
+    <div class="box">
+        <h3>🔐 Change Password</h3>
+        <input type="password" placeholder="New Password">
+        <input type="password" placeholder="Confirm Password">
+        <button onclick="changePassword()">Update Password</button>
+        <p id="passMsg"></p>
+    </div>
+
+    <!-- SKILL PREFERENCES -->
+    <div class="box">
+        <h3>🎯 Skill Preferences</h3>
+
+        <div class="skills">
+            <label><input type="checkbox"> Coding</label>
+            <label><input type="checkbox"> Fitness</label>
+            <label><input type="checkbox"> Communication</label>
+            <label><input type="checkbox"> Reading</label>
+        </div>
+    </div>
+
+    <!-- DARK MODE -->
+    <div class="box">
+        <h3>🌙 Dark Mode</h3>
+        <label class="switch">
+            <input type="checkbox" onclick="toggleDarkMode()">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+</div>
+
+<script src="../js/settings.js"></script>
+
+</body>
+</html>

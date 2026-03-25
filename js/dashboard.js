@@ -28,13 +28,6 @@ event.currentTarget.classList.add("active");
     card.classList.toggle("active");
 
 }
-do: "💻 Learn basics and build small projects.",
-why: "🚀 High demand skill for future.",
-action: "🔥 Start coding today."
-document.getElementById("skill-info").scrollIntoView({
-    behavior: "smooth"
-});
-
 
 function showSkill(skill) {
     const info = document.getElementById("skill-info");
@@ -60,4 +53,18 @@ function showSkill(skill) {
         document.getElementById("skill-why").innerText = "Important for user-friendly apps.";
         document.getElementById("skill-action").innerText = "Redesign any app screen.";
     }
+}
+
+function openSettings() {
+    document.getElementById("settingsPanel").classList.add("active");
+    document.getElementById("overlay").classList.add("active");
+}
+
+function closeSettings() {
+    document.getElementById("settingsPanel").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
 }

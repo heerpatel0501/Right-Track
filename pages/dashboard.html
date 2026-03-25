@@ -17,9 +17,9 @@
     </div>
 
     <div class="nav-right">
-        <span>Profile</span>
-        <span>Settings</span>
-    </div>
+    <span>Profile</span>
+    <span class="settings-icon" onclick="openSettings()">⚙️</span>
+</div>
 </nav>
 
 <!-- 🔹 MAIN DASHBOARD -->
@@ -101,6 +101,12 @@
             <img src="../images/home-science.avif">
             <div class="card-text">Home-Science</div></a>
         </div>
+
+        <div class="card" onclick="selectSkill(this)">
+            <a href="uiux.html">
+            <img src="../images/ux-ui.jpg">
+            <div class="card-text">UI-UX</div></a>
+        </div>
     </div>
 
     <!-- INFO SECTION -->
@@ -143,5 +149,33 @@
 
 <script src="../js/dashboard.js"></script>
 
+<!-- 🔹 SETTINGS SIDEBAR -->
+
+<div id="overlay" onclick="closeSettings()"></div>
+
+<div id="settingsPanel" class="settings-panel">
+
+    <h2>⚙️ Settings</h2>
+
+    <!-- PROFILE -->
+    <div class="setting-box">
+        <h4>👤 Profile</h4>
+        <input type="text" placeholder="Your Name">
+    </div>
+
+    <!-- PASSWORD -->
+    <div class="setting-box">
+        <h4>🔐 Change Password</h4>
+        <input type="password" placeholder="New Password">
+        <input type="password" placeholder="Confirm Password">
+    </div>
+
+    <!-- DARK MODE -->
+    <div class="setting-box">
+        <h4>🌙 Dark Mode</h4>
+        <input type="checkbox" onclick="toggleDarkMode()">
+    </div>
+
+</div>
 </body>
 </html>
