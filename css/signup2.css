@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f4f4f7, #c5e2ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+/* MAIN CARD */
+.container {
+    width: 680px;
+    height: 250px;
+    margin: 80px auto;
+    background: rgb(252, 252, 255);
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* LEFT */
+.left {
+    width: 50%;
+}
+
+.logo {
+    width: 40px;
+}
+
+.left h1 {
+    font-size: 32px;
+    margin: 20px 0 10px;
+}
+
+.left p {
+    color: #555;
+}
+
+/* RIGHT */
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* OPTIONS */
+.option {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.option input {
+    margin-right: 15px;
+}
+
+.option span {
+    font-size: 16px;
+}
+
+/* HOVER */
+.option:hover {
+    background: #f8fafc;
+}
+
+/* BOTTOM */
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.bottom a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+button {
+    padding: 10px 25px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e40af;
+}

@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff7ed, #ecfeff);
+}
+
+/* NAVBAR */
+.navbar {
+    padding: 18px 40px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 35px;
+}
+
+/* CONTAINER */
+.container {
+    padding: 40px 60px;
+}
+
+/* TITLE */
+h1 {
+    font-size: 34px;
+}
+
+/* BOX */
+.box {
+    background: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    transition: 0.3s;
+    position: relative;
+}
+
+.box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* TOP BORDER */
+.box::before {
+    content: "";
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #f97316, #22c55e);
+}
+
+/* TEXT */
+.box p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.box ul {
+    padding-left: 18px;
+}
+
+.box li {
+    margin-bottom: 8px;
+}
+
+/* VIDEOS */
+.video-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+iframe {
+    width: 300px;
+    height: 180px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+}
+
+iframe:hover {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+/* HIGHLIGHT SECTION */
+.highlight-section {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.highlight-card {
+    flex: 1;
+    min-width: 280px;
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* HOVER EFFECT */
+.highlight-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* TOP GRADIENT LINE */
+.highlight-card::before {
+    content: "";
+    height: 6px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #f97316, #ef4444);
+}
+
+/* IMAGE */
+.highlight-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+/* TITLE */
+.highlight-card h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+/* SUBTITLE */
+.highlight-card h3 {
+    margin-top: 10px;
+}
+
+/* TEXT */
+.highlight-card p {
+    color: #555;
+    margin-top: 8px;
+    line-height: 1.5;
+}
