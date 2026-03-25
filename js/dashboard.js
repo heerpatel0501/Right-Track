@@ -34,3 +34,30 @@ action: "🔥 Start coding today."
 document.getElementById("skill-info").scrollIntoView({
     behavior: "smooth"
 });
+
+
+function showSkill(skill) {
+    const info = document.getElementById("skill-info");
+    info.classList.remove("hidden");
+
+    if(skill === "web") {
+        document.getElementById("skill-title").innerText = "Web Development";
+        document.getElementById("skill-do").innerText = "Learn HTML, CSS, JS and build projects.";
+        document.getElementById("skill-why").innerText = "High demand and freelancing opportunities.";
+        document.getElementById("skill-action").innerText = "Start with a simple website today.";
+    }
+
+    if(skill === "ai") {
+        document.getElementById("skill-title").innerText = "AI & ML";
+        document.getElementById("skill-do").innerText = "Learn Python and basic ML concepts.";
+        document.getElementById("skill-why").innerText = "Future-proof and high-paying field.";
+        document.getElementById("skill-action").innerText = "Try small AI projects.";
+    }
+
+    if(skill === "design") {
+        document.getElementById("skill-title").innerText = "UI/UX Design";
+        document.getElementById("skill-do").innerText = "Learn Figma and design basics.";
+        document.getElementById("skill-why").innerText = "Important for user-friendly apps.";
+        document.getElementById("skill-action").innerText = "Redesign any app screen.";
+    }
+}

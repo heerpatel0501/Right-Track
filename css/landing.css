@@ -1,7 +1,7 @@
 body{
 margin:0;
 font-family:'Poppins', sans-serif;
-background:#eef2f7;
+background: linear-gradient(135deg, #f4f4f7, #c5e2ff);
 }
 
 /* 🔹 NAVBAR */
@@ -9,8 +9,9 @@ background:#eef2f7;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 50px;
-background:#f5f7fb;
+padding:10px 50px;
+background: linear-gradient(135deg, #ffffff, #b6daff);
+
 }
 
 /* LOGO */
@@ -24,6 +25,7 @@ cursor:pointer;
 .logo{
 width:45px;
 transition:0.3s;
+border-radius: 50%;
 }
 
 .brand-name{
@@ -74,7 +76,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(to bottom, #dbe4f0, #9aa9bd);
+background: linear-gradient(135deg, #f4f4f7, #6599ec);
 }
 
 .hero h1{
@@ -169,3 +171,130 @@ transform:scale(1.05);
 .explore-btn:hover{
     background:#4a90e2;
 }
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0ecff, #f8fbff);
+}
+
+/* SECTION COMMON */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* HEADINGS */
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1e293b;
+}
+
+/* FEATURES (WHY RIGHT TRACK) */
+
+.feature-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;   /* space between items */
+    flex-wrap: nowrap;  /* FORCE in one line */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    display: block;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 25px;
+    width: 95%;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+
+.feature h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* HOW IT WORKS */
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background: #2563eb;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* CTA */
+.cta {
+    margin-top: 40px;
+}
+
+.cta h2 {
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #2563eb;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1e40af;
+    transform: scale(1.05);
+}
+
+.feature p {
+    font-weight: 500;
+    color: #334155;
+}
+/* IMAGE LEFT */
+.feature-img {
+    width: 320px;
+    height: 300px;
+}
+.feature-content p {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 5px;
+    display: block;
+}
+

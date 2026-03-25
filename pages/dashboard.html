@@ -1,86 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Skills Dashboard</title>
+<meta charset="UTF-8">
+<title>Right Track Dashboard</title>
 
-    <link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/dashboard.css">
 </head>
 
 <body>
 
 <!-- 🔹 NAVBAR -->
 <nav class="navbar">
-    <h2>Right Track</h2>
+    <div class="nav-left">
+        <img src="../images/logo.png" class="logo">
+        <h2>Right Track</h2>
+    </div>
+
+    <div class="nav-right">
+        <span>Profile</span>
+        <span>Settings</span>
+    </div>
 </nav>
 
-<!-- 🔹 DASHBOARD -->
-<div class="container">
+<!-- 🔹 MAIN DASHBOARD -->
+<div class="dashboard">
 
     <h1>Select Your Skills</h1>
-    <div class="recommend-box">
-    <h3>Recommended For You</h3>
-    <p>Based on your age, focus on:</p>
-    <ul>
-        <li>💻 Coding Basics</li>
-        <li>🗣 Communication Skills</li>
-        <li>🏃 Fitness</li>
-    </ul>
-</div>
-<div class="daily-box">
-    <h3>Today's Suggestion</h3>
-    <p>💡 Practice coding for 30 minutes</p>
-    <p>📖 Read 10 pages of a book</p>
-</div>
-<div class="progress-box">
-    <h3>Your Progress</h3>
 
-    <p>Coding</p>
-    <div class="bar"><div class="fill" style="width: 40%;"></div></div>
+    <!-- SKILL CARDS -->
+    <div class="card-container">
 
-    <p>Fitness</p>
-    <div class="bar"><div class="fill" style="width: 60%;"></div></div>
+        <div class="card" onclick="selectSkill(this)">
+            <img src="../images/coding.jpeg">
+            <div class="card-text">Coding</div>
+        </div>
 
-    <p>Reading</p>
-    <div class="bar"><div class="fill" style="width: 30%;"></div></div>
-</div>
+        <div class="card" onclick="selectSkill(this)">
+            <img src="../images/communication.jpeg">
+            <div class="card-text">Communication</div>
+        </div>
 
-    <div class="skills-grid">
-        <p style="color:gray;">Choose a skill to get personalized guidance</p>
+        <div class="card" onclick="selectSkill(this)">
+            <img src="../images/fittness.jpeg">
+            <div class="card-text">Fitness</div>
+        </div>
 
-       <div class="card" onclick="selectSkill(this)">
-    <img src="../images/coding.jpeg">
-    <div class="card-text">Coding</div>
-</div>
+        <div class="card" onclick="selectSkill(this)">
+            <img src="../images/music.jpeg">
+            <div class="card-text">Music</div>
+        </div>
 
-<div class="card" onclick="selectSkill(this)">
-    <img src="../images/communication.jpeg">
-    <div class="card-text">Communication</div>
-</div>
+        <div class="card" onclick="selectSkill(this)">
+            <img src="../images/reading.jpeg">
+            <div class="card-text">Reading</div>
+        </div>
 
-<div class="card" onclick="selectSkill(this)">
-    <img src="../images/fittness.jpeg">
-    <div class="card-text">Fitness</div>
-</div>
+        <div class="card" onclick="selectSkill(this)">
+            <img src="../images/photography.png">
+            <div class="card-text">Photography</div>
+        </div>
 
-<div class="card" onclick="selectSkill(this)">
-    <img src="../images/music.jpeg">
-    <div class="card-text">Music</div>
-</div>
+    </div>
 
-<div class="card" onclick="selectSkill(this)">
-    <img src="../images/reading.jpeg">
-    <div class="card-text">Reading</div>
-</div>
+    <!-- INFO SECTION -->
+    <div class="info-section">
 
-<div class="card" onclick="selectSkill(this)">
-    <img src="../images/photography.png">
-    <div class="card-text">Photography</div>
-</div>
+        <!-- RECOMMEND -->
+        <div class="box">
+            <h3>Recommended For You</h3>
+            <ul>
+                <li>💻 Coding Basics</li>
+                <li>🗣 Communication Skills</li>
+                <li>🏃 Fitness</li>
+            </ul>
+        </div>
+
+        <!-- DAILY -->
+        <div class="box">
+            <h3>Today's Suggestion</h3>
+            <p>💡 Practice coding for 30 minutes</p>
+            <p>📖 Read 10 pages</p>
+        </div>
+
+        <!-- PROGRESS -->
+        <div class="box">
+            <h3>Your Progress</h3>
+
+            <p>Coding</p>
+            <div class="bar"><div class="fill" style="width: 40%;"></div></div>
+
+            <p>Fitness</p>
+            <div class="bar"><div class="fill" style="width: 60%;"></div></div>
+
+            <p>Reading</p>
+            <div class="bar"><div class="fill" style="width: 30%;"></div></div>
+        </div>
+
     </div>
 
 </div>
 
-<script src="js/dashboard.js"></script>
+<script src="../js/dashboard.js"></script>
 
 </body>
 </html>
