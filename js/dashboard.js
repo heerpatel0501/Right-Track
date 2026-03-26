@@ -68,3 +68,16 @@ function closeSettings() {
 function toggleDarkMode() {
     document.body.classList.toggle("dark");
 }
+function openProfile() {
+    document.getElementById("profilePanel").classList.add("active");
+}
+
+/* CLOSE WHEN CLICK OUTSIDE */
+document.addEventListener("click", function(e) {
+    let panel = document.getElementById("profilePanel");
+
+    if (!panel.contains(e.target) && !e.target.classList.contains("profile-btn")) {
+        panel.classList.remove("active");
+    }
+});
+

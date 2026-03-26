@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CONTAINER */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.profile-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    width: 280px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.profile-card h2 {
+    margin: 10px 0 5px;
+}
+
+.profile-card p {
+    color: #555;
+}

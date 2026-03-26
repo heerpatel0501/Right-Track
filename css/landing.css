@@ -172,12 +172,6 @@ transform:scale(1.05);
     background:#4a90e2;
 }
 
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #e0ecff, #f8fbff);
-}
-
 /* SECTION COMMON */
 section {
     padding: 60px 20px;
@@ -194,7 +188,6 @@ h2 {
 /* FEATURES (WHY RIGHT TRACK) */
 
 .feature-box {
-    display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;   /* space between items */
@@ -205,30 +198,35 @@ h2 {
 
 }
 
-.features {
-    display: flex;
+.features-container {
+    display: flex;              /* 👈 MAIN CHANGE */
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 25px;
+    flex-wrap: wrap;            /* responsive */
 }
-
+.feature {
+    width: 260px;
+    text-align: center;
+}
 .feature {
     background: white;
-    padding: 20px 30px;
+    padding: 20px;
     border-radius: 12px;
-    min-width: 220px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
-    display: block;
-    align-items: center;
-    gap: 15px;
-    background: white;
-    padding: 25px;
-    width: 95%;
-    border-radius: 14px;
+    width: 260px;
+    text-align: center;  /* 👈 VERY IMPORTANT */
+
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     transition: 0.3s;
+}
+
+.feature-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .feature:hover {
@@ -282,19 +280,47 @@ h2 {
     transform: scale(1.05);
 }
 
-.feature p {
-    font-weight: 500;
-    color: #334155;
-}
 /* IMAGE LEFT */
 .feature-img {
-    width: 320px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
 }
+
 .feature-content p {
     font-size: 13px;
     color: #64748b;
-    margin-top: 5px;
-    display: block;
+    margin-top: 5px; 
 }
 
+.about-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+
+    text-align: center;
+    line-height: 1.8;
+
+    color: #333;
+    font-size: 16px;
+
+    background: white;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.about-section p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    transition: 0.3s;
+    padding: 10px;
+    border-radius: 8px;
+}
+.about-section:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+.about-section p:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
